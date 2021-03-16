@@ -1,4 +1,4 @@
-import com.abysl.civitas.common.App
+import com.abysl.civitas.compose.App
 import androidx.compose.desktop.Window
 
 fun main() = Window {
