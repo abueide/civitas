@@ -65,15 +65,27 @@ Civitas is built on a kotlin multiplatform architecture.
 
 ## Build Instructions
 
-First, clone the repo
+First, clone the repo, and set sdk directory
+
 `git clone https://github.com/abueide/civitas.git`
+
 `cd civitas`
+
+`local.properties > "sdk.dir=C:\\Users\\User\\AppData\\Local\\Android\\Sdk"`
+
+`local.properties > "sdk.dir=/home/user/path/to/android/sdk"`
 
 Then, use the gradle wrapper to execute tasks. You can execute a task by the following command
 
 Linux & MacOS
 
 `./gradlew desktop:run`
+
+`./gradlew android:installDebug`
+
+`./gradlew web:browserDevelopmentRun --continuous`
+
+`./gradlew web:browserProductionRun --continuous`
 
 `./gradlew desktop:packageDeb`
 
