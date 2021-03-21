@@ -24,7 +24,7 @@ Civitas is built on a kotlin multiplatform architecture.
   - matrix-org/matrix-js-sdk  - js/web app official matrix implementation
 
 - abysl/civitas/
-    - common - common multiplatform module, used by all civitas modules, depends on abysl/matrix-kotlin-mpp
+    - common/ - common multiplatform module, used by all civitas modules, depends on abysl/matrix-kotlin-mpp
         - commonMain     - expected function handles go here, as well as common kotlin.
         - iosMain        - Swift code/obj c libraries, and kotlin native supported mpp kotlin libraries are accessible, no jvm or js libraries.
         - androidMain    - Any java 6/7/8 libraries usable depending on platform target, any kotlin library usable.
