@@ -15,6 +15,7 @@ include(":android")
 include(":desktop")
 include(":common")
 include(":compose")
+include(":ios")
 include(":web")
 
 

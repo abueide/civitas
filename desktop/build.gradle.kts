@@ -3,7 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     kotlin("multiplatform")
-    id("org.jetbrains.compose") version "0.2.0-build132"
+    id("org.jetbrains.compose") version "0.4.0-build174"
 }
 
 group = "com.abysl.civitas"
@@ -16,7 +16,7 @@ repositories {
 kotlin {
     jvm {
         compilations.all {
-            kotlinOptions.jvmTarget = "11"
+            kotlinOptions.jvmTarget = "15"
         }
     }
     sourceSets {
@@ -35,7 +35,7 @@ compose.desktop {
         mainClass = "MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "jvm"
+            packageName = "Civitas"
         }
     }
 }
