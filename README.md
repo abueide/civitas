@@ -17,28 +17,24 @@ The Civitas project tries to solve these problems by building a platform that co
 
 Civitas is built on a kotlin multiplatform architecture.
 
-.
-├── abysl/matrix-kotlin-mpp/ - External dependency, core multiplatform matrix sdk, depends on platform specific sdks
 
-│   ├── matrix-org/matrix-android-sdk2 - jvm desktop/android official matrix implementation
+- abysl/matrix-kotlin-mpp/ - External dependency, core multiplatform matrix sdk, depends on platform specific sdks
+  - matrix-org/matrix-android-sdk2 - jvm desktop/android official matrix implementation
+  - matrix-org/matrix-ios-sdk - native/ios official matrix implementation
+  - matrix-org/matrix-js-sdk  - js/web app official matrix implementation
 
-│   ├── matrix-org/matrix-ios-sdk - native/ios official matrix implementation
-
-│   └── matrix-org/matrix-js-sdk  - js/web app official matrix implementation
-
-└── abysl/civitas/
-
-    ├── common - common multiplatform module, used by all civitas modules, depends on abysl/matrix-kotlin-mpp
-    
-    ├── compose - jvm module to share compose components/code between the android and desktop projects, depends on :common
-    
-    ├── android - android app, depends on :compose
-    
-    ├── desktop - desktop app, depends on :compose
-    
-    ├── ios - ios app, depends on :common
-    
-    └── web - react-kotlin web app, depends on :common
+- abysl/civitas/
+    - common - common multiplatform module, used by all civitas modules, depends on abysl/matrix-kotlin-mpp
+        - commonMain     - expected function handles go here, as well as common kotlin.
+        - iosMain        - Swift code/obj c libraries, and kotlin native supported mpp kotlin libraries are accessible, no jvm or js libraries.
+        - androidMain    - Any java 6/7/8 libraries usable depending on platform target, any kotlin library usable.
+        - desktopMain    - Any java or kotlin libraries usable.
+        - webMain        - Only javascript/typescript and mpp kotlin libraries available.
+    - compose - jvm module to share compose components/code between the android and desktop projects, depends on :common
+    - android - android app, depends on :compose
+    - desktop - desktop app, depends on :compose
+    - ios - ios app, depends on :common
+    - web - react-kotlin web app, depends on :common
     
 
 ## Build Instructions
