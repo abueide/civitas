@@ -18,17 +18,28 @@ The Civitas project tries to solve these problems by building a platform that co
 Civitas is built on a kotlin multiplatform architecture.
 
 .
-├── abysl/matrix-kotlin-mpp/ - External dependency, core multiplatform matrix sdk, depends on platform specific sdks /
+├── abysl/matrix-kotlin-mpp/ - External dependency, core multiplatform matrix sdk, depends on platform specific sdks
+
 │   ├── matrix-org/matrix-android-sdk2 - jvm desktop/android official matrix implementation
+
 │   ├── matrix-org/matrix-ios-sdk - native/ios official matrix implementation
+
 │   └── matrix-org/matrix-js-sdk  - js/web app official matrix implementation
+
 └── abysl/civitas/
+
     ├── common - common multiplatform module, used by all civitas modules, depends on abysl/matrix-kotlin-mpp
+    
     ├── compose - jvm module to share compose components/code between the android and desktop projects, depends on :common
+    
     ├── android - android app, depends on :compose
+    
     ├── desktop - desktop app, depends on :compose
+    
     ├── ios - ios app, depends on :common
+    
     └── web - react-kotlin web app, depends on :common
+    
 
 ## Build Instructions
 
