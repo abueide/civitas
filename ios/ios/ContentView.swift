@@ -2,7 +2,8 @@ import SwiftUI
 import common
 
 func greet() -> String {
-    return "Hello from" + getPlatformName()
+    TestStuff(test: "Test things").print()
+    return "Hello from " + PlatformKt.getPlatformName()
 }
 
 struct ContentView: View {

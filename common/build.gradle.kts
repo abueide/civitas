@@ -20,7 +20,7 @@ kotlin {
             kotlinOptions.jvmTarget = "15"
         }
     }
-    iosArm64 {
+    ios {
         binaries {
             framework {
                 baseName = "common"
@@ -55,8 +55,8 @@ kotlin {
         }
         val desktopMain by getting
         val desktopTest by getting
-        val iosArm64Main by getting
-        val iosArm64Test by getting
+        val iosMain by getting
+        val iosTest by getting
         val webMain by getting
         val webTest by getting {
             dependencies {
@@ -79,7 +79,7 @@ val packForXcode by tasks.creating(Sync::class) {
     group = "build"
     val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
     val sdkName = System.getenv("SDK_NAME") ?: "iphonesimulator"
-    val targetName = "iosArm64"
+    val targetName = "ios" + if (sdkName.startsWith("iphoneos")) "Arm64" else "X64"
     val framework = kotlin.targets.getByName<KotlinNativeTarget>(targetName).binaries.getFramework(mode)
     inputs.property("mode", mode)
     dependsOn(framework.linkTask)
