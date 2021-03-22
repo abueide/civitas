@@ -1,7 +1,7 @@
 package com.abysl.civitas.common
 
 class TestStuff(val test: String) {
-    fun print(){
+    fun print() {
         print(test)
     }
 }
