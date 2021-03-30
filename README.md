@@ -41,7 +41,7 @@ whether to make them a permanent member.
   mechanisms)
 - [ ] Livestreaming & chats for events (presentations, watch together, workshops etc). There should be a global chat,
   and a working-group specific chat.
-- [ ] Healthy way to manage community splits (e.g. bitcoin forks, great r/animemes civil war etc). Federation &
+- [ ] Healthy way to manage community splits (e.g. bitcoin forks). Federation &
   censorship resistance.
 - [ ] Decentralized filestorage integration (magnet links, ipfs links, swarm links?)
 - [ ] Some sort of way to crowdfund campaigns (cryptocurrency, liberapay, etc)
